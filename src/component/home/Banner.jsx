@@ -1,11 +1,12 @@
+import { fontBangla } from "@/app/layout";
 import Image from "next/image";
 import React from "react";
 
 const Banner = () => {
   return (
-    <div className="flex justify-between items-center">
-      <div className="flex-1 space-y-5">
-        <h1 className="text-3xl md:text-5xl font-bold leading-tight text-gray-900">
+    <div className=" container mx-auto flex flex-col md:flex-row justify-between items-center">
+      <div className="flex-1 mx-5 space-y-5">
+        <h1 className={`${fontBangla.className} text-3xl md:text-5xl font-bold leading-tight text-gray-900`}>
           আপনার শিশুকে দিন <br />
           <span className="text-[#fc4000]">সুন্দর ভবিষ্যৎ</span>
         </h1>

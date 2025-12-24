@@ -3,10 +3,18 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import React from 'react';
 
-const Navlink = ({href,children}) => {
-    const path=usePathname();
-    return <Link className={`${path.startsWith(href) && "text-primary"} font-medium`} href={href}>{children}</Link>
-    
+const Navlink = ({ href, children }) => {
+    const path = usePathname();
+    const isActive = path.startsWith(href) && href !== "/";
+
+    return (
+        <Link
+            href={href}
+            className={`${isActive ? "text-primary" : ""} font-medium`}
+        >
+            {children}
+        </Link>
+    );
 };
 
 export default Navlink;
